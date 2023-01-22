@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>online pharmacy India| Buy Medicine</title>
-    <link rel="stylesheet" href="indexone.css">
+    <link rel="stylesheet" href="indexstyle.css">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTvvExfheGYdXS-c2ltBGvTRbbWxB_PfkIUw&usqp=CAU" type="image/x-icon">
 
 
@@ -1147,19 +1147,6 @@
 
             </div>
 
-
-
-            <!-- <div class="contact">
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/facebook.svg" />
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/instagram.svg" />
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/twitter.svg" />
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/youtube.svg" />
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/pinterest.svg" />
-                </div> -->
-
-            <!-- <input type="email" placeholder=" Enter your email" required>
-            <button onclick="function1()"> SUBSCRIBE</button> -->
-
         </div>
         <div class="footerabove">
             <div class="stayhealthy">
@@ -1257,5 +1244,41 @@
         </div>
     </div>
 </body>
-<link rel="stylesheet" href="indexscript.js">
+<script>
+
+const carouselContainerElement = document.querySelector(".carousel-container ");
+
+const carouselItemElements = document.querySelectorAll(".carousel-item ");
+
+let currentItem = 0;
+
+function onInterval() {
+    currentItem++;
+    carouselContainerElement.style.transitionDuration = "0.5s ";
+    carouselContainerElement.style.transform = `translateX(-${currentItem * 100}%)`;
+
+    if (currentItem === carouselItemElements.length - 1) {
+        // carouselContainerElement.style.transform = `translateX(0)`;
+        // clearInterval(interval);
+        console.log("red ");
+        currentItem = -1;
+    }
+}
+let interval = setInterval(onInterval, 2000);
+
+carouselContainerElement.addEventListener("transitionend ", function() {
+    if (currentItem === -1) {
+        carouselContainerElement.style.transitionDuration = "0s ";
+        carouselContainerElement.style.transform = `translateX(0)`;
+        clearInterval(interval);
+        currentItem = 0;
+        interval = setInterval(onInterval, 2000);
+    }
+
+    console.log(currentItem);
+})
+
+
+
+</script>
 </html>

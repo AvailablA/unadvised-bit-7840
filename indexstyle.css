@@ -238,10 +238,8 @@
     box-shadow: 0px 0px 18px rgba(31, 30, 30, 0.2);
     border-radius: 15px;
 }
-
-.producttab1 {}
-
-.prodimg>img {
+.prodimg>img 
+{
     max-width: 50%;
     display: block;
     margin-left: auto;
